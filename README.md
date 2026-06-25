@@ -62,7 +62,7 @@ sudo apt install spotify-client
 # 3️⃣ Install Minimal Graphical Dependencies
 
 ```bash
-sudo apt install xorg xvfb dbus-x11 pulseaudio
+sudo apt install xorg xvfb dbus-x11 pulseaudio alsa-utils
 ```
 
 ---
@@ -165,6 +165,12 @@ systemctl --user start spotify-headless
 ---
 
 # 7️⃣ Audio Configuration
+
+Add user to audio group:
+```bash
+sudo usermod -aG audio $USER
+```
+Reboot or logout-login for change to take effect.
 
 List audio devices:
 
